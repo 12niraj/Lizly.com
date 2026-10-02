@@ -29,7 +29,7 @@ const Signup = ({setcheckloggedin}) => {
       terms:terms
     };
 
-    axios.post("http://localhost:3001/signup", data,{
+    axios.post(`${import.meta.env.VITE_API_URL}/signup`, data,{
     withCredentials: true,
   })
       .then((response) => {

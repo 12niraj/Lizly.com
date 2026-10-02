@@ -21,7 +21,7 @@ const Hero = () => {
       full_url: fullUrl,
     };
     await axios
-      .post("http://localhost:3001/", data, {
+      .post(`${import.meta.env.VITE_API_URL}/`, data, {
     withCredentials: true
   })
       .then((response) => {
@@ -35,7 +35,7 @@ const Hero = () => {
   };
 
   const copyurl = async () => {
-    const url = `http://localhost:3001/${shortUrl}`;
+    const url = `${import.meta.env.VITE_API_URL}/${shortUrl}`;
 
     await navigator.clipboard.writeText(url);
     console.log("URL copied!");
@@ -116,7 +116,7 @@ const Hero = () => {
 
             <div className="mt-2 flex items-center gap-3">
               <span className="text-xl font-semibold text-blue-400">
-                {`http://localhost:3001/${shortUrl}`}
+                {`${import.meta.env.VITE_API_URL}/${shortUrl}`}
               </span>
 
               <button

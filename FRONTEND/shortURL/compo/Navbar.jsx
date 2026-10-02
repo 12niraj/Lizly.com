@@ -20,10 +20,10 @@ const Navbar = ({checkloggedin, setcheckloggedin}) => {
   const [logoutmsg, setlogoutmsg] = useState("")
   
   useEffect(() => {
-    console.log("navbar open");
+    console.log("navbar open"); 
 
     axios
-      .get("http://localhost:3001/checklogin", {
+      .get(`${import.meta.env.VITE_API_URL}/checklogin`, {
         withCredentials: true,
       })
       .then((response) => {
@@ -39,7 +39,7 @@ const Navbar = ({checkloggedin, setcheckloggedin}) => {
   }, []);
 
 const logoutHandle =()=>{
-  axios.post("http://localhost:3001/logout" , {}, 
+  axios.post(`${import.meta.env.VITE_API_URL}/lgout` , {}, 
     { withCredentials: true })
     .then((response)=>{
     setlogoutmsg(response.data.message)

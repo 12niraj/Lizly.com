@@ -9,14 +9,15 @@ const Qrcode = ({ shortUrl, }) => {
   const [lastQrLink, setLastQrLink] = useState("");
   const [notlogged, setnotlogged] = useState("")
 
-  const shortLink = `http://localhost:3001/${shortUrl}`;
+  const shortLink = `${import.meta.env.VITE_API_URL}/${shortUrl}`;
+  `${import.meta.env.VITE_API_URL}/dashboard`
   console.log("short url is ", shortUrl);
 
   //QR generate BTN---------------------------->
 
   const QrgenerateBtn = () => {
 
-    axios.patch("http://localhost:3001/countqr",{}, {
+    axios.patch(`${import.meta.env.VITE_API_URL}/countqr`,{}, {
     withCredentials: true,
   })
   .then((response)=>{

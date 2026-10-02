@@ -205,7 +205,7 @@ for (let i = 6; i >= 0; i--) {
         </div>
 
 
-        {/* Link 1 */}
+        {/* Link 1 */} ${link.short_url}
 
       { checkviewall ? (  toplink.map((link,index)=>(
         
@@ -213,7 +213,7 @@ for (let i = 6; i >= 0; i--) {
 
         <div>
             <p className="font-semibold text-blue-400">
-              {`http://localhost:3001/${link.short_url}`}
+              {`${import.meta.env.VITE_API_URL}/${link.short_url}`}
             </p>
 
             <p className="mt-1 text-sm text-gray-400">
@@ -238,7 +238,7 @@ for (let i = 6; i >= 0; i--) {
 
         <div>
             <p className="font-semibold text-blue-400">
-              {`http://localhost:3001/${link.short_url}`}
+              {`${import.meta.env.VITE_API_URL}/${link.short_url}`}
             </p>
 
             <p className="mt-1 text-sm text-gray-400">

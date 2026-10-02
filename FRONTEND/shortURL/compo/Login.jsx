@@ -25,7 +25,7 @@ const Login = ({ setcheckloggedin }) => {
     console.log("click login");
 
     axios
-      .post("http://localhost:3001/login", logindata, {
+      .post(`${import.meta.env.VITE_API_URL}/login`, logindata, {
         withCredentials: true,
       })
       .then((response) => {

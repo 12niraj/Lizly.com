@@ -25,7 +25,7 @@ const DashLayout = () => {
     
     //----dashbard API----------
 
-    axios.get("http://localhost:3001/dashboard",  {
+    axios.get(`${import.meta.env.VITE_API_URL}/dashboard`,  {
     withCredentials: true,
   })
   .then((response)=>{
@@ -53,7 +53,7 @@ const DashLayout = () => {
 
   //PROFILE API CALL
 
-  axios.get("http://localhost:3001/profile",{
+  axios.get(`${import.meta.env.VITE_API_URL}/profile`,{
     withCredentials:true,
   })
   .then((response)=>{

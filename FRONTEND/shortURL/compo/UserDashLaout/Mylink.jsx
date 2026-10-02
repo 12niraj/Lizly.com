@@ -24,7 +24,7 @@ const Mylink = () => {
     console.log("button click");
 
     axios
-      .delete(`http://localhost:3001/deletelink/${id}`, {
+      .delete(`${import.meta.env.VITE_API_URL}/deletelink/${id}`, {
         withCredentials: true,
       })
       .then((response) => {
@@ -99,7 +99,7 @@ const Mylink = () => {
               className="grid grid-cols-[1.2fr_2.5fr_0.7fr_1.3fr_2fr] items-center gap-8 border-b border-blue-400/10 bg-[#0d2342] px-5 py-4 text-sm font-medium text-gray-400"
             >
               <p className="text-blue-400">
-                {`http://localhost:3001/${link.short_url}`}
+                {`${import.meta.env.VITE_API_URL}/${link.short_url}`}
               </p>
 
               <p className="truncate text-gray-400">{link.full_url}</p>
@@ -134,13 +134,13 @@ const Mylink = () => {
 
                 <div className="mt-5 flex justify-center rounded-xl bg-white p-4">
                   <QRCodeCanvas
-                    value={`http://localhost:3001/${selectedLink.short_url}`}
+                    value={`${import.meta.env.VITE_API_URL}/${selectedLink.short_url}`}
                     size={180}
                   />
                 </div>
 
                 <p className="mt-4 truncate text-sm text-gray-400">
-                  {`http://localhost:3001/${selectedLink.short_url}`}
+                  {`${import.meta.env.VITE_API_URL}/${selectedLink.short_url}`}
                 </p>
 
                 <button
