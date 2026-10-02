@@ -1,0 +1,30 @@
+{
+  "name": "url-shortner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "connect-mongo": "^6.0.0",
+    "connect-mongoose": "^0.0.2",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.1",
+    "env": "^0.0.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mongodb": "^7.6.0",
+    "mongoose": "^9.10.2",
+    "nanoid": "^6.0.1",
+    "nodemon": "^3.1.14",
+    "recharts": "^3.10.1"
+  }
+}
