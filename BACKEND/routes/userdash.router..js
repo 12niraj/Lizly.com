@@ -1,7 +1,7 @@
 import express from 'express'
 import User from '../models/user.model.js';
 import Shorturlschema from '../models/shorturl.model.js';
-import Clickdate from '../models/Clickdate.model.js';
+import Clickdate from '../models/clickdate.model.js';
 
 const userdashRouter= express.Router()
  
