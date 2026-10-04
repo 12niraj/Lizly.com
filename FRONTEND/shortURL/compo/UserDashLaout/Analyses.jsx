@@ -8,7 +8,6 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip,
   ResponsiveContainer
 } from "recharts";
 
@@ -205,7 +204,7 @@ for (let i = 6; i >= 0; i--) {
         </div>
 
 
-        {/* Link 1 */} ${link.short_url}
+        {/* Link 1 ${link.short_url} */}
 
       { checkviewall ? (  toplink.map((link,index)=>(
         
