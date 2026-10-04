@@ -28,7 +28,7 @@ const UserDashboard = () => {
     console.log("button click");
 
     axios
-      .delete(`${import.meta.env.VITE_API_URL}deletelink/${id}`, {
+      .delete(`${import.meta.env.VITE_API_URL}/deletelink/${id}`, {
         withCredentials: true,
       })
       .then((response) => {
