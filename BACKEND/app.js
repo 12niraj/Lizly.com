@@ -34,11 +34,12 @@ store: MongoStore.create({
       mongoUrl: process.env.MONGO_URL,
     }),
 
-    cookie: {
-      httpOnly: true,
-      secure: false,
-      maxAge: 1000 * 60 * 60 * 24, // 1 day
-        }
+ cookie: {
+  httpOnly: true,
+  secure: true,
+  sameSite: "none",
+  maxAge: 1000 * 60 * 60 * 24
+}
     }
  ))
 
