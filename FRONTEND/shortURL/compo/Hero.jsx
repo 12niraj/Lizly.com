@@ -4,11 +4,10 @@ import axios from "axios";
 import Qrcode from "./Qrcode";
 import Feature from "./Feature";
 const Hero = () => {
-  const [fullUrl, setfullUrl] = useState("");
-  const [shortUrl, setshortUrl] = useState("");
-
 
   
+  const [fullUrl, setfullUrl] = useState("");
+  const [shortUrl, setshortUrl] = useState("");
 
   const [copied, setcopied] = useState(false);
   const [lasturl, setlasturl] = useState("");
@@ -22,8 +21,8 @@ const Hero = () => {
     };
     await axios
       .post(`${import.meta.env.VITE_API_URL}/`, data, {
-    withCredentials: true
-  })
+        withCredentials: true,
+      })
       .then((response) => {
         setshortUrl(response.data);
         setlasturl(fullUrl);
@@ -61,14 +60,11 @@ const Hero = () => {
 
         {/* Heading */}
         <div className="mx-auto max-w-4xl text-center">
-         <h1 className="text-6xl font-extrabold leading-tight">
-  Shorten Your Links
-  <br />
-  with{" "}
-  <span className="text-blue-400">
-    Lizyl
-  </span>
-</h1>
+          <h1 className="text-6xl font-extrabold leading-tight">
+            Shorten Your Links
+            <br />
+            with <span className="text-blue-400">Lizyl</span>
+          </h1>
 
           <p className="mx-auto mt-5 max-w-2xl text-lg text-gray-300">
             Turn long, messy URLs into short, clean and shareable links.

@@ -5,10 +5,7 @@ import User from '../models/user.model.js'
 
 
 const createurlConroller= async(req,res)=>{
-    console.log("1//create url");
-    
-       console.log("LOGIN SESSION:", req.session);
-    console.log("LOGIN SESSION id:", req.session.userId);
+   
 
     const{full_url}=req.body
     console.log("full url is", full_url);

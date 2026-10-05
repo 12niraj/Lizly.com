@@ -41,7 +41,6 @@ const App = () => {
         </Route>
         
 
-        {/* <Route path='/home' element={<Hero/>}/> */}
       </Routes>
     </div>
   );
