@@ -5,9 +5,9 @@ const checkloginRouter= express.Router()
 
 checkloginRouter.get("/checklogin",async (req,res)=>{
 
-//       console.log("🔥 CHECKLOGIN ROUTE HIT");
-//   console.log("SESSION:", req.session);
-//   console.log("USER ID:", req.session.userId);
+      console.log("🔥 CHECKLOGIN ROUTE HIT");
+  console.log("SESSION is :", req.session);
+  console.log("USER ID:", req.session.userId);
 
  
     if(!req.session.userId)

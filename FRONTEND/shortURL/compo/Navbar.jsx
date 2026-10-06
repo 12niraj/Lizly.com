@@ -22,8 +22,7 @@ const Navbar = ({checkloggedin, setcheckloggedin}) => {
   useEffect(() => {
     console.log("navbar open"); 
 
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/checklogin`, {
+    axios.get(`${import.meta.env.VITE_API_URL}/checklogin`, {
         withCredentials: true,
       })
       .then((response) => {
@@ -39,7 +38,7 @@ const Navbar = ({checkloggedin, setcheckloggedin}) => {
   }, []);
 
 const logoutHandle =()=>{
-  axios.post(`${import.meta.env.VITE_API_URL}/lgout` , {}, 
+  axios.post(`${import.meta.env.VITE_API_URL}/logout` , {}, 
     { withCredentials: true })
     .then((response)=>{
     setlogoutmsg(response.data.message)
@@ -73,6 +72,9 @@ const logoutHandle =()=>{
 
           {/* Navigation */}
           <div className="hidden items-center gap-8 md:flex">
+
+              {/* DASHBORD CREATE WHEN LOGGED IN */}
+
             {checkloggedin && (
               <Link
                 to="/dashboard"
@@ -129,7 +131,7 @@ const logoutHandle =()=>{
                   className="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-blue-500/10"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-500 font-bold">
-                    {name.charAt(0).toUpperCase()}
+                    {/* {name.charAt(0).toUpperCase()} */}
                   </div>
 
                   <span className="font-semibold">{name}</span>

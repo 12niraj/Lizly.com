@@ -10,7 +10,7 @@ const Qrcode = ({ shortUrl, }) => {
   const [notlogged, setnotlogged] = useState("")
 
   const shortLink = `${import.meta.env.VITE_API_URL}/${shortUrl}`;
-  `${import.meta.env.VITE_API_URL}/dashboard`
+  // `${import.meta.env.VITE_API_URL}/dashboard`
   console.log("short url is ", shortUrl);
 
   //QR generate BTN---------------------------->

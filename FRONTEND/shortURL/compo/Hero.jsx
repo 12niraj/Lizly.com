@@ -11,7 +11,14 @@ const Hero = () => {
 
   const [copied, setcopied] = useState(false);
   const [lasturl, setlasturl] = useState("");
-  console.log("full url is", fullUrl);
+  // console.log("full url is", fullUrl);
+
+
+ //-----------delerte later
+console.log("MODE is:", import.meta.env.MODE);
+console.log("ALL ENV:", import.meta.env);
+console.log("API URL:", import.meta.env.VITE_API_URL);
+
 
   const shortenBtn = async () => {
     console.log("Btn click");
@@ -26,7 +33,7 @@ const Hero = () => {
       .then((response) => {
         setshortUrl(response.data);
         setlasturl(fullUrl);
-        console.log("short url is", shortUrl);
+        // console.log("short url is", shortUrl);
       })
       .catch((error) => {
         const message = error.response.data.message;

@@ -21,7 +21,10 @@ const app= express()
 app.use(express.json())
 
 app.use(cors({
-  origin: "https://lizly-com-wz23.vercel.app",
+   origin: [
+    "http://localhost:5173",
+    "https://lizly-com-wz23.vercel.app"
+  ],
   credentials: true
 }));
 
